@@ -1,0 +1,95 @@
+{
+  "categories": [
+    {
+      "id": "cocteleria_casa",
+      "nombre": "Coctelería de la Casa",
+      "items": [
+        {
+          "nombre": "Ohana",
+          "precio": 10000,
+          "descripcion": "Cocktail clarificado que combina ron añejo y ron de coco, con un toque de blue curacao y piña para obtener un color traslucido acompañado de caviar falso de blue curacao y piña deshidratada.",
+          "tags": ["clarificado", "dulce", "frutal"]
+        },
+        {
+          "nombre": "Detrás de la Niebla",
+          "precio": 10000,
+          "descripcion": "Cocktail que representa la camanchaca y la vista de noche en carretera hacia el interior, detrás de la niebla hay un cocktail de color oscuro y notas ahumadas, tanto en sabor como aromas, un brebaje seco pero con escasas notas dulces que lo balancean.",
+          "tags": ["ahumado", "seco", "intenso"]
+        },
+        {
+          "nombre": "Capresse",
+          "precio": 10900,
+          "descripcion": "Cocktail herbal de colores verde y rojo simulando el estilo capresse que tiene como base un gin de la Patagonia procesado y filtrado con albahaca y queso de cabra, que se termina con un shot de jugo de tomate clarificado, escasas notas cítricas para el balance.",
+          "tags": ["herbal", "salado", "gourmet"]
+        }
+      ]
+    },
+    {
+      "id": "whisky_pisco",
+      "nombre": "Destilados",
+      "items": [
+        { "nombre": "Jack Old 7°", "precio": 12000, "tags": ["whisky"] },
+        { "nombre": "Johnnie Black", "precio": 14000, "tags": ["whisky"] },
+        { "nombre": "Mistral 40°", "precio": 11500, "tags": ["pisco"] },
+        { "nombre": "Waqar 40°", "precio": 17500, "tags": ["pisco", "premium"] }
+      ]
+    },
+    {
+      "id": "cervezas",
+      "nombre": "Cervezas & Schop",
+      "items": [
+        { "nombre": "Kross Golden Ale", "precio": 11000, "tags": ["schop"] },
+        { "nombre": "Kunstmann Torobayo", "precio": 11500, "tags": ["schop"] },
+        { "nombre": "Corona Botellín", "precio": 7000, "tags": ["botella"] }
+      ]
+    },
+    {
+      "id": "entradas",
+      "nombre": "Entradas & Crudos",
+      "items": [
+        {
+          "nombre": "Ceviche Musa",
+          "precio": 14500,
+          "descripcion": "Cortes de pescado fresco del día marinados en leche de tigre al ají amarillo, acompañados de camote glaseado, cancha tostada y cebolla pluma.",
+          "tags": ["mariscos", "fresco", "para compartir"]
+        },
+        {
+          "nombre": "Tártaro de Res Premium",
+          "precio": 13900,
+          "descripcion": "Filete de res picado a cuchillo, aderezado con alcaparras, pepinillos, mostaza antigua y yema de huevo curada, servido con tostadas artesanales.",
+          "tags": ["carnes", "clásico"]
+        }
+      ]
+    },
+    {
+      "id": "fondos",
+      "nombre": "Platos de Fondo",
+      "items": [
+        {
+          "nombre": "Platón de Plateada al Horno",
+          "precio": 16900,
+          "descripcion": "Plateada cocinada a baja temperatura por 6 horas en sus propios jugos y vino tinto, servida sobre un cremoso pastel de choclo tradicional.",
+          "tags": ["carnes", "destacado"]
+        },
+        {
+          "nombre": "Salmón Austral Crocante",
+          "precio": 17500,
+          "descripcion": "Filete de salmón con costra de frutos secos, acompañado de un risotto de quinoa y setas del bosque al aroma de trufa.",
+          "tags": ["pescado", "gourmet"]
+        }
+      ]
+    },
+    {
+      "id": "tablas_picoteo",
+      "nombre": "Tablas & Picoteos",
+      "items": [
+        {
+          "nombre": "Tabla Mar y Tierra",
+          "precio": 24900,
+          "descripcion": "Camarones al ajillo, calamares apanados, cubos de lomo liso salteados, papas rústicas nativas y variedad de salsas de la casa.",
+          "tags": ["para compartir", "caliente"]
+        }
+      ]
+    }
+  ]
+}
