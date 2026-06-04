@@ -1,93 +1,2576 @@
 {
   "categories": [
     {
-      "id": "cocteleria_casa",
-      "nombre": "Coctelería de la Casa",
-      "items": [
+      "id": "comida",
+      "nombre": "Comida",
+      "icono": "fa-solid fa-utensils",
+      "descripcion": "Platos, tablas, sanguchitos, empanadas y preparaciones de la casa.",
+      "imagen": "https://images.unsplash.com/photo-1544025162-d76694265947?w=900&auto=format&fit=crop&q=70",
+      "subcategorias": [
         {
-          "nombre": "Ohana",
-          "precio": 10000,
-          "descripcion": "Cocktail clarificado que combina ron añejo y ron de coco, con un toque de blue curacao y piña para obtener un color traslucido acompañado de caviar falso de blue curacao y piña deshidratada.",
-          "tags": ["clarificado", "dulce", "frutal"]
+          "id": "cocina_fondos",
+          "nombre": "Cocina & Fondos",
+          "descripcion": "Platos principales, fondos y preparaciones de cocina.",
+          "items": [
+            {
+              "nombre": "Lomo Saltado",
+              "precio": 17990,
+              "descripcion": "Carne de res salteada al wok con cebollas y tomates en ají, acompañado de arroz, palta y papas fritas.",
+              "imagen": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "carne",
+                "wok",
+                "destacado"
+              ]
+            },
+            {
+              "nombre": "Pulpito al Olivo",
+              "precio": 14990,
+              "descripcion": "Pulpo, crema de aceitunas de Azapa, palta, chalaca y tierra de aceituna.",
+              "imagen": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "mariscos",
+                "fresco"
+              ]
+            },
+            {
+              "nombre": "Fetuccini Mar y Tierra",
+              "precio": 18600,
+              "descripcion": "Fetuccini preparado con trozos de res y mix de mariscos salteados al wok.",
+              "tags": [
+                "pasta",
+                "mar y tierra"
+              ]
+            },
+            {
+              "nombre": "Carpaccio de Salmón",
+              "precio": 11990,
+              "descripcion": "Láminas de salmón, mousse de palta, brotes, parmesano y alcaparras.",
+              "tags": [
+                "salmón",
+                "entrada"
+              ]
+            },
+            {
+              "nombre": "Risotto Frutos del Mar",
+              "precio": 17990,
+              "descripcion": "Tradicional preparación de arroz cremoso en salsa de mariscos.",
+              "tags": [
+                "risotto",
+                "mariscos"
+              ]
+            },
+            {
+              "nombre": "Viva la Cruda",
+              "precio": 14890,
+              "descripcion": "Filete de res con quinoa crocante, aceite de ajonjolí, limón, pimienta, sal, cebollita morada, salsa acevichada y mousse de palta.",
+              "tags": [
+                "res",
+                "fresco"
+              ]
+            },
+            {
+              "nombre": "Ceviche Mixto",
+              "precio": 14990,
+              "descripcion": "Pescado del día, pulpo, camarón, conchitas, cebollita morada, choclo, leche de tigre y amor por Perú.",
+              "imagen": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "mariscos",
+                "imperdible"
+              ]
+            },
+            {
+              "nombre": "Filete Bardado",
+              "precio": 17990,
+              "descripcion": "Filete bardado con tocino ahumado, acompañado de un exquisito risotto al pesto.",
+              "tags": [
+                "filete",
+                "pesto"
+              ]
+            },
+            {
+              "nombre": "Lomo o Nada",
+              "precio": 16900,
+              "descripcion": "Lomo de res sellado, salsa teriyaki, clorofila, puré al miso y hongos salteados.",
+              "imagen": "https://images.unsplash.com/photo-1558030006-450675393462?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "premium",
+                "carne"
+              ]
+            },
+            {
+              "nombre": "Pescado del Día",
+              "precio": 16000,
+              "tags": [
+                "pescado"
+              ]
+            },
+            {
+              "nombre": "Pulpo a la Parrilla",
+              "precio": 17900,
+              "tags": [
+                "pulpo",
+                "parrilla"
+              ]
+            },
+            {
+              "nombre": "Entrañame",
+              "precio": 22900,
+              "tags": [
+                "entraña",
+                "parrilla"
+              ]
+            },
+            {
+              "nombre": "Tirados o Tiremos",
+              "precio": 13900,
+              "tags": [
+                "entrada",
+                "pescado"
+              ]
+            }
+          ]
         },
         {
-          "nombre": "Detrás de la Niebla",
-          "precio": 10000,
-          "descripcion": "Cocktail que representa la camanchaca y la vista de noche en carretera hacia el interior, detrás de la niebla hay un cocktail de color oscuro y notas ahumadas, tanto en sabor como aromas, un brebaje seco pero con escasas notas dulces que lo balancean.",
-          "tags": ["ahumado", "seco", "intenso"]
+          "id": "para_compartir",
+          "nombre": "Para Compartir",
+          "descripcion": "Opciones pensadas para compartir en la mesa.",
+          "items": [
+            {
+              "nombre": "Entre Mar y Tierra",
+              "precio": 35900,
+              "descripcion": "Pulpito al olivo, carpaccio de salmón, carne de res, pollo, verduras salteadas, 2 empanaditas y papas fritas.",
+              "imagen": "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "para compartir",
+                "gigante"
+              ]
+            },
+            {
+              "nombre": "Entre Quesos y Antojitos",
+              "precio": 18000,
+              "tags": [
+                "para compartir"
+              ]
+            },
+            {
+              "nombre": "Tablita Marina Fría",
+              "precio": 19000,
+              "descripcion": "Carpaccio de salmón, conchitas a la parmesana y ceviche del día.",
+              "imagen": "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "mariscos",
+                "frío"
+              ]
+            },
+            {
+              "nombre": "Entre Brasas y Deseos",
+              "precio": 41900,
+              "tags": [
+                "para compartir",
+                "brasas"
+              ]
+            },
+            {
+              "nombre": "Musa Vegetariana",
+              "precio": 8000,
+              "tags": [
+                "vegetariano"
+              ]
+            },
+            {
+              "nombre": "Trilogía de Ceviches",
+              "precio": 18000,
+              "tags": [
+                "ceviche",
+                "mariscos"
+              ]
+            },
+            {
+              "nombre": "Brochetas de Pasión",
+              "precio": 17000,
+              "tags": [
+                "brochetas"
+              ]
+            },
+            {
+              "nombre": "Chicken Musa",
+              "precio": 11900,
+              "tags": [
+                "pollo"
+              ]
+            },
+            {
+              "nombre": "Wings Musa",
+              "precio": 9900,
+              "tags": [
+                "alitas"
+              ]
+            }
+          ]
         },
         {
-          "nombre": "Capresse",
-          "precio": 10900,
-          "descripcion": "Cocktail herbal de colores verde y rojo simulando el estilo capresse que tiene como base un gin de la Patagonia procesado y filtrado con albahaca y queso de cabra, que se termina con un shot de jugo de tomate clarificado, escasas notas cítricas para el balance.",
-          "tags": ["herbal", "salado", "gourmet"]
+          "id": "pecado_capital",
+          "nombre": "Pecado Capital",
+          "descripcion": "Papas, carnes, queso y preparaciones abundantes para compartir.",
+          "items": [
+            {
+              "nombre": "Pecado Capital 2 Personas",
+              "precio": 16900,
+              "descripcion": "Base de papas fritas acompañada de lomo, tocino, pollo, cebolla caramelizada, chorizo, queso, verduras salteadas y 2 huevos.",
+              "imagen": "https://images.unsplash.com/photo-1585109649139-366815a0d713?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "papas fritas",
+                "2 personas"
+              ]
+            },
+            {
+              "nombre": "Pecado Capital 3 Personas",
+              "precio": 22900,
+              "descripcion": "Base de papas fritas acompañada de lomo, tocino, pollo, cebolla caramelizada, chorizo, queso, verduras salteadas y huevos.",
+              "tags": [
+                "papas fritas",
+                "3 personas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tablas",
+          "nombre": "Tablas",
+          "descripcion": "Tablas y formatos para grupos.",
+          "items": [
+            {
+              "nombre": "Tabla de Quesadilla",
+              "precio": 16900,
+              "tags": [
+                "tabla"
+              ]
+            },
+            {
+              "nombre": "Tabla Quesadilla de Verdura",
+              "precio": 10900,
+              "tags": [
+                "tabla",
+                "verdura"
+              ]
+            },
+            {
+              "nombre": "Tabla X2",
+              "precio": 17900,
+              "tags": [
+                "tabla",
+                "2 personas"
+              ]
+            },
+            {
+              "nombre": "Tabla X4",
+              "precio": 32900,
+              "tags": [
+                "tabla",
+                "4 personas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fajitas",
+          "nombre": "Fajitas",
+          "descripcion": "Fajitas y agregados para armar tu combinación.",
+          "items": [
+            {
+              "nombre": "Fajita Mixta",
+              "precio": 10900,
+              "tags": [
+                "fajita"
+              ]
+            },
+            {
+              "nombre": "Fajita Pollo",
+              "precio": 9900,
+              "tags": [
+                "fajita",
+                "pollo"
+              ]
+            },
+            {
+              "nombre": "Fajita Carne",
+              "precio": 9000,
+              "tags": [
+                "fajita",
+                "carne"
+              ]
+            },
+            {
+              "nombre": "Fajita Musa",
+              "precio": 12000,
+              "tags": [
+                "fajita",
+                "musa"
+              ]
+            },
+            {
+              "nombre": "Agrega tu Favorito",
+              "precio": 1000,
+              "descripcion": "Choricillo, tocino, queso mozarella, camarón, tomate deshidratado, pimentón, aceituna, rúcula y otros.",
+              "tags": [
+                "extra"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "canastas_pizzas",
+          "nombre": "Canastas & Pizzas",
+          "descripcion": "Canastas, pizzas y preparaciones casuales.",
+          "items": [
+            {
+              "nombre": "Canasta Mexicana",
+              "precio": 12900,
+              "tags": [
+                "canasta"
+              ]
+            },
+            {
+              "nombre": "La Canasta",
+              "precio": 12900,
+              "tags": [
+                "canasta"
+              ]
+            },
+            {
+              "nombre": "Pizza Margarita",
+              "precio": 11000,
+              "tags": [
+                "pizza"
+              ]
+            },
+            {
+              "nombre": "Pizza Peperoni",
+              "precio": 11990,
+              "tags": [
+                "pizza"
+              ]
+            },
+            {
+              "nombre": "Pizza Mechada Barbecue",
+              "precio": 15000,
+              "tags": [
+                "pizza"
+              ]
+            },
+            {
+              "nombre": "Pizza de la Casa",
+              "precio": 16900,
+              "tags": [
+                "pizza"
+              ]
+            },
+            {
+              "nombre": "Arma tu Pizza",
+              "precio": 16900,
+              "tags": [
+                "pizza"
+              ]
+            },
+            {
+              "nombre": "Ni Tan César",
+              "precio": 13900,
+              "tags": [
+                "ensalada"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sanguchitos",
+          "nombre": "Sanguchitos de la Casa",
+          "descripcion": "Sanguchitos de la casa en pan brioche y combinaciones especiales.",
+          "items": [
+            {
+              "nombre": "Mechada Gratinada",
+              "precio": 8990,
+              "descripcion": "Carne mechada de la casa, palta, bañada en queso derretido dentro de pan brioche.",
+              "imagen": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "sánguche",
+                "queso"
+              ]
+            },
+            {
+              "nombre": "La Agridulce",
+              "precio": 7900,
+              "tags": [
+                "sánguche"
+              ]
+            },
+            {
+              "nombre": "Doña Chaca",
+              "precio": 8990,
+              "tags": [
+                "sánguche"
+              ]
+            },
+            {
+              "nombre": "La Paltona",
+              "precio": 9990,
+              "tags": [
+                "sánguche",
+                "palta"
+              ]
+            },
+            {
+              "nombre": "Ipeca Chami",
+              "precio": 11900,
+              "tags": [
+                "sánguche"
+              ]
+            },
+            {
+              "nombre": "Titalian Burger",
+              "precio": 9000,
+              "tags": [
+                "burger"
+              ]
+            },
+            {
+              "nombre": "Cheddar Burger",
+              "precio": 9000,
+              "tags": [
+                "burger"
+              ]
+            },
+            {
+              "nombre": "Pizza Burger",
+              "precio": 8000,
+              "tags": [
+                "burger"
+              ]
+            },
+            {
+              "nombre": "La Regia",
+              "precio": 10990,
+              "descripcion": "Hamburguesa 200 g, queso cheddar, cebolla caramelizada, lechuga, tocino crocante y salsa de la casa.",
+              "imagen": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "hamburguesa"
+              ]
+            },
+            {
+              "nombre": "Hamburguesa Clásica",
+              "precio": 9000,
+              "tags": [
+                "burger"
+              ]
+            },
+            {
+              "nombre": "Chicken Golf",
+              "precio": 8000,
+              "tags": [
+                "pollo",
+                "burger"
+              ]
+            },
+            {
+              "nombre": "Arma tu Clásico",
+              "precio": 11000,
+              "tags": [
+                "sánguche"
+              ]
+            },
+            {
+              "nombre": "Barros Luco",
+              "precio": 8000,
+              "tags": [
+                "sánguche"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "empanadas_lujuria",
+          "nombre": "Empanadas de Lujuria",
+          "descripcion": "Empanadas fritas con distintos rellenos.",
+          "items": [
+            {
+              "nombre": "Mechada Queso",
+              "precio": 4500,
+              "tags": [
+                "empanada"
+              ]
+            },
+            {
+              "nombre": "Pulpo Queso",
+              "precio": 4500,
+              "tags": [
+                "empanada"
+              ]
+            },
+            {
+              "nombre": "Camarón Queso",
+              "precio": 4500,
+              "tags": [
+                "empanada"
+              ]
+            },
+            {
+              "nombre": "Caprese",
+              "precio": 3500,
+              "tags": [
+                "empanada"
+              ]
+            },
+            {
+              "nombre": "Queso",
+              "precio": 3500,
+              "tags": [
+                "empanada"
+              ]
+            },
+            {
+              "nombre": "Pollo Queso",
+              "precio": 4000,
+              "tags": [
+                "empanada"
+              ]
+            },
+            {
+              "nombre": "Champiñón Queso",
+              "precio": 3900,
+              "tags": [
+                "empanada"
+              ]
+            },
+            {
+              "nombre": "Queso Aceituna",
+              "precio": 3500,
+              "tags": [
+                "empanada"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "momentos_lujuria",
+          "nombre": "Momentos de Lujuria",
+          "descripcion": "Postres y preparaciones dulces para cerrar la experiencia.",
+          "items": [
+            {
+              "nombre": "Tentación",
+              "precio": 6900,
+              "tags": [
+                "postre"
+              ]
+            },
+            {
+              "nombre": "Volcán de Lujuria",
+              "precio": 6900,
+              "tags": [
+                "postre"
+              ]
+            },
+            {
+              "nombre": "Ansiedad de Dulzura",
+              "precio": 6900,
+              "tags": [
+                "postre"
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "id": "whisky_pisco",
-      "nombre": "Destilados",
-      "items": [
-        { "nombre": "Jack Old 7°", "precio": 12000, "tags": ["whisky"] },
-        { "nombre": "Johnnie Black", "precio": 14000, "tags": ["whisky"] },
-        { "nombre": "Mistral 40°", "precio": 11500, "tags": ["pisco"] },
-        { "nombre": "Waqar 40°", "precio": 17500, "tags": ["pisco", "premium"] }
+      "id": "cocteles",
+      "nombre": "Cócteles",
+      "icono": "fa-solid fa-martini-glass-citrus",
+      "descripcion": "Coctelería de autor, clásicos, sours, mojitos, spritz, gin y destilados.",
+      "imagen": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=900&auto=format&fit=crop&q=70",
+      "subcategorias": [
+        {
+          "id": "cocteleria_casa",
+          "nombre": "Coctelería de la Casa",
+          "descripcion": "Creaciones de autor de la barra Musa.",
+          "items": [
+            {
+              "nombre": "Ohana",
+              "precio": 10000,
+              "descripcion": "Cocktail clarificado que combina ron añejo y ron de coco, con un toque de blue curacao y piña. Acompañado de caviar falso de blue curacao.",
+              "imagen": "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "clarificado",
+                "dulce"
+              ]
+            },
+            {
+              "nombre": "Detrás de la Niebla",
+              "precio": 10000,
+              "descripcion": "Cocktail que representa la camanchaca. Notas ahumadas, tanto en sabor como aromas, un brebaje seco pero con escasas notas dulces.",
+              "imagen": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "ahumado",
+                "seco"
+              ]
+            },
+            {
+              "nombre": "Capresse",
+              "precio": 10000,
+              "descripcion": "Base de gin de la Patagonia filtrado con albahaca y queso de cabra, con un shot de jugo de tomate clarificado. Acompañado de un crujiente snack.",
+              "imagen": "https://images.unsplash.com/photo-1574085733277-851d9d856a3a?w=500&auto=format&fit=crop&q=60",
+              "tags": [
+                "herbal",
+                "gourmet"
+              ]
+            },
+            {
+              "nombre": "Rifugio Rosso",
+              "precio": 10000,
+              "tags": [
+                "casa",
+                "coctel"
+              ]
+            },
+            {
+              "nombre": "Natalita",
+              "precio": 8900,
+              "tags": [
+                "casa",
+                "coctel"
+              ]
+            },
+            {
+              "nombre": "Eva",
+              "precio": 9000,
+              "tags": [
+                "casa",
+                "coctel"
+              ]
+            },
+            {
+              "nombre": "A Tu Pinta",
+              "precio": 10000,
+              "tags": [
+                "casa",
+                "coctel"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mojitos",
+          "nombre": "Mojitos",
+          "descripcion": "Mojitos tradicionales y versiones especiales.",
+          "items": [
+            {
+              "nombre": "Jagger",
+              "precio": 11500,
+              "tags": [
+                "mojito"
+              ]
+            },
+            {
+              "nombre": "Espumante",
+              "precio": 11000,
+              "tags": [
+                "mojito"
+              ]
+            },
+            {
+              "nombre": "Cubano",
+              "precio": 11000,
+              "tags": [
+                "mojito"
+              ]
+            },
+            {
+              "nombre": "Sabores",
+              "precio": 11900,
+              "tags": [
+                "mojito"
+              ]
+            },
+            {
+              "nombre": "Ramazzotti",
+              "precio": 13500,
+              "tags": [
+                "mojito"
+              ]
+            },
+            {
+              "nombre": "Corona",
+              "precio": 14000,
+              "tags": [
+                "mojito"
+              ]
+            },
+            {
+              "nombre": "Polaco",
+              "precio": 13000,
+              "tags": [
+                "mojito"
+              ]
+            },
+            {
+              "nombre": "Royal",
+              "precio": 11500,
+              "tags": [
+                "mojito"
+              ]
+            },
+            {
+              "nombre": "Irlandés",
+              "precio": 12500,
+              "tags": [
+                "mojito"
+              ]
+            },
+            {
+              "nombre": "Fire Maracuyá",
+              "precio": 12000,
+              "tags": [
+                "mojito"
+              ]
+            },
+            {
+              "nombre": "Irlandés Sabores",
+              "precio": 13000,
+              "tags": [
+                "mojito"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sour",
+          "nombre": "Sour",
+          "descripcion": "Sours chilenos, peruanos y variedades de sabores.",
+          "items": [
+            {
+              "nombre": "Sour Peruano",
+              "precio": 12000,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "Sour Peruano Sabores",
+              "precio": 13500,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "Sour Chileno",
+              "precio": 10000,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "Sour Chileno Sabores",
+              "precio": 11500,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "Sour Pisco 4 Gallos",
+              "precio": 16000,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "Sour Pisco 4 Gallos Sabores",
+              "precio": 17000,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "Whisky Sour",
+              "precio": 12900,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "Amaretto Sour",
+              "precio": 11500,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "Negroni Sour",
+              "precio": 17500,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "New York Sour",
+              "precio": 18000,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "Mango Sour",
+              "precio": 10000,
+              "tags": [
+                "sour"
+              ]
+            },
+            {
+              "nombre": "Maracuyá Sour",
+              "precio": 10000,
+              "tags": [
+                "sour"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "macerados",
+          "nombre": "Macerados",
+          "descripcion": "Cócteles macerados con frutas y especias.",
+          "items": [
+            {
+              "nombre": "Huesillo Naranja",
+              "precio": 14900,
+              "tags": [
+                "macerado"
+              ]
+            },
+            {
+              "nombre": "Clavo de Olor, Canela y Naranja",
+              "precio": 14900,
+              "tags": [
+                "macerado"
+              ]
+            },
+            {
+              "nombre": "Del Bosque, Frutilla, Arándanos y Frambuesas",
+              "precio": 14900,
+              "tags": [
+                "macerado"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cocteleria_clasica",
+          "nombre": "Coctelería Clásica",
+          "descripcion": "Cócteles clásicos reconocidos y favoritos de la barra.",
+          "items": [
+            {
+              "nombre": "Tequila Sunrise",
+              "precio": 10500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Tequila Margarita",
+              "precio": 10500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Paloma",
+              "precio": 12500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Cosmopolitan",
+              "precio": 11000,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Bloody Mary",
+              "precio": 13500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "White Lady",
+              "precio": 12500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Bee's Knees",
+              "precio": 11500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Hanky Panky",
+              "precio": 13000,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "French 75",
+              "precio": 13000,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Martini Dry",
+              "precio": 12500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Negroni",
+              "precio": 13000,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Manhattan",
+              "precio": 11500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Sangría",
+              "precio": 12500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Moscow Mule",
+              "precio": 14900,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Old Fashioned",
+              "precio": 13000,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Carajillo",
+              "precio": 12500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Clavo Oxidado",
+              "precio": 13000,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Cuba Libre",
+              "precio": 11500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Espresso Martini",
+              "precio": 12500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Tom Yum Collins",
+              "precio": 11900,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Daiquiri",
+              "precio": 11500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Daiquiri Sabores",
+              "precio": 13000,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Pisco Blanco",
+              "precio": 11500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Pisco Negro",
+              "precio": 11500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Tequila Blue",
+              "precio": 10500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Piña Colada",
+              "precio": 11000,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "Mango Colado",
+              "precio": 10500,
+              "tags": [
+                "clásico"
+              ]
+            },
+            {
+              "nombre": "London Mule",
+              "precio": 14500,
+              "tags": [
+                "clásico"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "spritz",
+          "nombre": "Spritz",
+          "descripcion": "Spritz frescos, burbujeantes y aromáticos.",
+          "items": [
+            {
+              "nombre": "Ramazzotti",
+              "precio": 13000,
+              "tags": [
+                "spritz"
+              ]
+            },
+            {
+              "nombre": "Pomelo Stephano",
+              "precio": 13000,
+              "tags": [
+                "spritz"
+              ]
+            },
+            {
+              "nombre": "Aperol",
+              "precio": 13000,
+              "tags": [
+                "spritz"
+              ]
+            },
+            {
+              "nombre": "Chambord",
+              "precio": 13000,
+              "tags": [
+                "spritz"
+              ]
+            },
+            {
+              "nombre": "Saint Germain",
+              "precio": 13000,
+              "tags": [
+                "spritz"
+              ]
+            },
+            {
+              "nombre": "Campari",
+              "precio": 13000,
+              "tags": [
+                "spritz"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gin",
+          "nombre": "Gin",
+          "descripcion": "Gin tonic y variedades premium.",
+          "items": [
+            {
+              "nombre": "Hendrick's",
+              "precio": 17000,
+              "tags": [
+                "gin"
+              ]
+            },
+            {
+              "nombre": "Hendrick's Variedad",
+              "precio": 17000,
+              "tags": [
+                "gin"
+              ]
+            },
+            {
+              "nombre": "Beefeater London",
+              "precio": 11000,
+              "tags": [
+                "gin"
+              ]
+            },
+            {
+              "nombre": "Beefeater Pink",
+              "precio": 11500,
+              "tags": [
+                "gin"
+              ]
+            },
+            {
+              "nombre": "Bombay Sapphire",
+              "precio": 12500,
+              "tags": [
+                "gin"
+              ]
+            },
+            {
+              "nombre": "Tanqueray",
+              "precio": 11000,
+              "tags": [
+                "gin"
+              ]
+            },
+            {
+              "nombre": "Tanqueray Royale",
+              "precio": 13000,
+              "tags": [
+                "gin"
+              ]
+            },
+            {
+              "nombre": "Tanqueray Sevilla",
+              "precio": 13000,
+              "tags": [
+                "gin"
+              ]
+            },
+            {
+              "nombre": "Bulldog",
+              "precio": 17900,
+              "tags": [
+                "gin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "caipirinha",
+          "nombre": "Caipiriña",
+          "descripcion": "Caipiriñas tradicionales y saborizadas.",
+          "items": [
+            {
+              "nombre": "Tradicional",
+              "precio": 10500,
+              "tags": [
+                "caipiriña"
+              ]
+            },
+            {
+              "nombre": "Sabores",
+              "precio": 11000,
+              "tags": [
+                "caipiriña"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "whisky",
+          "nombre": "Whisky",
+          "descripcion": "Whisky y combinados disponibles.",
+          "items": [
+            {
+              "nombre": "Jack Old 7°",
+              "precio": 12000,
+              "tags": [
+                "whisky"
+              ]
+            },
+            {
+              "nombre": "Jack Apple",
+              "precio": 12500,
+              "tags": [
+                "whisky"
+              ]
+            },
+            {
+              "nombre": "Jack Fire",
+              "precio": 12500,
+              "tags": [
+                "whisky"
+              ]
+            },
+            {
+              "nombre": "Jack Honey",
+              "precio": 12500,
+              "tags": [
+                "whisky"
+              ]
+            },
+            {
+              "nombre": "Johnnie Red",
+              "precio": 12000,
+              "tags": [
+                "whisky"
+              ]
+            },
+            {
+              "nombre": "Johnnie Black",
+              "precio": 14000,
+              "tags": [
+                "whisky"
+              ]
+            },
+            {
+              "nombre": "Johnnie Blue",
+              "precio": 60000,
+              "tags": [
+                "whisky"
+              ]
+            },
+            {
+              "nombre": "Chivas 12 Años",
+              "precio": 13500,
+              "tags": [
+                "whisky"
+              ]
+            },
+            {
+              "nombre": "Chivas 18 Años",
+              "precio": 21000,
+              "tags": [
+                "whisky"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pisco",
+          "nombre": "Pisco",
+          "descripcion": "Piscos y combinados disponibles.",
+          "items": [
+            {
+              "nombre": "Mistral 35°",
+              "precio": 11000,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Mistral 40°",
+              "precio": 11500,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Mistral Nobel",
+              "precio": 13000,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Mistral Nobel Apple",
+              "precio": 13500,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Mistral Nobel Fire",
+              "precio": 13500,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Alto 35°",
+              "precio": 10500,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Alto 40°",
+              "precio": 12000,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Alto Transparente",
+              "precio": 12000,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Alto Etiqueta Negra",
+              "precio": 12000,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Horcón 35°",
+              "precio": 11500,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Horcón 40°",
+              "precio": 12000,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Waqar 40°",
+              "precio": 17500,
+              "tags": [
+                "pisco"
+              ]
+            },
+            {
+              "nombre": "Gobernador 40°",
+              "precio": 11500,
+              "tags": [
+                "pisco"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ron",
+          "nombre": "Ron",
+          "descripcion": "Ron y combinados disponibles.",
+          "items": [
+            {
+              "nombre": "Havana 7 Años",
+              "precio": 12000,
+              "tags": [
+                "ron"
+              ]
+            },
+            {
+              "nombre": "Havana Especial",
+              "precio": 10000,
+              "tags": [
+                "ron"
+              ]
+            },
+            {
+              "nombre": "Havana Reserva",
+              "precio": 11000,
+              "tags": [
+                "ron"
+              ]
+            },
+            {
+              "nombre": "Pampero Aniversario",
+              "precio": 15500,
+              "tags": [
+                "ron"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vodka",
+          "nombre": "Vodka",
+          "descripcion": "Vodka y combinados disponibles.",
+          "items": [
+            {
+              "nombre": "Absolut 100",
+              "precio": 10000,
+              "tags": [
+                "vodka"
+              ]
+            },
+            {
+              "nombre": "Absolut Original",
+              "precio": 11000,
+              "tags": [
+                "vodka"
+              ]
+            },
+            {
+              "nombre": "Absolut Sabores",
+              "precio": 12000,
+              "tags": [
+                "vodka"
+              ]
+            },
+            {
+              "nombre": "Stolichnaya",
+              "precio": 11000,
+              "tags": [
+                "vodka"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mocktails",
+          "nombre": "Mocktails",
+          "descripcion": "Cócteles sin alcohol.",
+          "items": [
+            {
+              "nombre": "Shirley Temple",
+              "precio": 4490,
+              "tags": [
+                "mocktail",
+                "sin alcohol"
+              ]
+            },
+            {
+              "nombre": "Coffee Tonic Naranja",
+              "precio": 4900,
+              "tags": [
+                "mocktail",
+                "sin alcohol"
+              ]
+            },
+            {
+              "nombre": "Musa Spritz",
+              "precio": 5900,
+              "tags": [
+                "mocktail",
+                "sin alcohol"
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "cervezas",
-      "nombre": "Cervezas & Schop",
-      "items": [
-        { "nombre": "Kross Golden Ale", "precio": 11000, "tags": ["schop"] },
-        { "nombre": "Kunstmann Torobayo", "precio": 11500, "tags": ["schop"] },
-        { "nombre": "Corona Botellín", "precio": 7000, "tags": ["botella"] }
-      ]
-    },
-    {
-      "id": "entradas",
-      "nombre": "Entradas & Crudos",
-      "items": [
+      "nombre": "Cervezas",
+      "icono": "fa-solid fa-beer-mug-empty",
+      "descripcion": "Schop, botellines, micheladas y opciones sin alcohol.",
+      "imagen": "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=900&auto=format&fit=crop&q=70",
+      "subcategorias": [
         {
-          "nombre": "Ceviche Musa",
-          "precio": 14500,
-          "descripcion": "Cortes de pescado fresco del día marinados en leche de tigre al ají amarillo, acompañados de camote glaseado, cancha tostada y cebolla pluma.",
-          "tags": ["mariscos", "fresco", "para compartir"]
+          "id": "schop",
+          "nombre": "Schop",
+          "descripcion": "Cervezas en schop disponibles.",
+          "items": [
+            {
+              "nombre": "Kross 5",
+              "precio": 12000,
+              "tags": [
+                "schop"
+              ]
+            },
+            {
+              "nombre": "Kross Golden Ale",
+              "precio": 11000,
+              "tags": [
+                "schop"
+              ]
+            },
+            {
+              "nombre": "Kross Stout",
+              "precio": 11500,
+              "tags": [
+                "schop"
+              ]
+            },
+            {
+              "nombre": "Kunstmann Torobayo",
+              "precio": 11500,
+              "tags": [
+                "schop"
+              ]
+            },
+            {
+              "nombre": "Austral Calafate",
+              "precio": 11500,
+              "tags": [
+                "schop"
+              ]
+            },
+            {
+              "nombre": "Heineken",
+              "precio": 10000,
+              "tags": [
+                "schop"
+              ]
+            },
+            {
+              "nombre": "Peroni",
+              "precio": 10000,
+              "tags": [
+                "schop"
+              ]
+            },
+            {
+              "nombre": "Stella Artois",
+              "precio": 10000,
+              "tags": [
+                "schop"
+              ]
+            },
+            {
+              "nombre": "Budweiser",
+              "precio": 10000,
+              "tags": [
+                "schop"
+              ]
+            },
+            {
+              "nombre": "Royal",
+              "precio": 9500,
+              "tags": [
+                "schop"
+              ]
+            }
+          ]
         },
         {
-          "nombre": "Tártaro de Res Premium",
-          "precio": 13900,
-          "descripcion": "Filete de res picado a cuchillo, aderezado con alcaparras, pepinillos, mostaza antigua y yema de huevo curada, servido con tostadas artesanales.",
-          "tags": ["carnes", "clásico"]
+          "id": "micheladas",
+          "nombre": "Micheladas",
+          "descripcion": "Preparaciones para acompañar tu cerveza.",
+          "items": [
+            {
+              "nombre": "Chelada",
+              "precio": 2000,
+              "descripcion": "Sal y zumo de limón.",
+              "tags": [
+                "michelada"
+              ]
+            },
+            {
+              "nombre": "Michelada",
+              "precio": 2000,
+              "descripcion": "Sal, merken y zumo de limón.",
+              "tags": [
+                "michelada"
+              ]
+            },
+            {
+              "nombre": "Todos los Poderes",
+              "precio": 3000,
+              "descripcion": "Sal, merken, salsa inglesa, ají y zumo de limón.",
+              "tags": [
+                "michelada"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "botellin",
+          "nombre": "Botellín",
+          "descripcion": "Cervezas en formato botellín.",
+          "items": [
+            {
+              "nombre": "Kunstmann",
+              "precio": 11000,
+              "tags": [
+                "botellín"
+              ]
+            },
+            {
+              "nombre": "Austral Variedades",
+              "precio": 11000,
+              "tags": [
+                "botellín"
+              ]
+            },
+            {
+              "nombre": "Corona",
+              "precio": 7000,
+              "tags": [
+                "botellín"
+              ]
+            },
+            {
+              "nombre": "Stella",
+              "precio": 6500,
+              "tags": [
+                "botellín"
+              ]
+            },
+            {
+              "nombre": "Heineken",
+              "precio": 6500,
+              "tags": [
+                "botellín"
+              ]
+            },
+            {
+              "nombre": "Sol",
+              "precio": 6500,
+              "tags": [
+                "botellín"
+              ]
+            },
+            {
+              "nombre": "Royal Guard",
+              "precio": 6500,
+              "tags": [
+                "botellín"
+              ]
+            },
+            {
+              "nombre": "Budweiser",
+              "precio": 6500,
+              "tags": [
+                "botellín"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cerveza_sin_alcohol",
+          "nombre": "Cerveza Sin Alcohol",
+          "descripcion": "Cervezas sin alcohol disponibles.",
+          "items": [
+            {
+              "nombre": "Heineken",
+              "precio": 7000,
+              "tags": [
+                "sin alcohol"
+              ]
+            },
+            {
+              "nombre": "Corona",
+              "precio": 7000,
+              "tags": [
+                "sin alcohol"
+              ]
+            },
+            {
+              "nombre": "Stella",
+              "precio": 7000,
+              "tags": [
+                "sin alcohol"
+              ]
+            },
+            {
+              "nombre": "Budweiser",
+              "precio": 7000,
+              "tags": [
+                "sin alcohol"
+              ]
+            },
+            {
+              "nombre": "Kunstmann",
+              "precio": 8000,
+              "tags": [
+                "sin alcohol"
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "id": "fondos",
-      "nombre": "Platos de Fondo",
-      "items": [
+      "id": "sushi",
+      "nombre": "Sushi",
+      "icono": "fa-solid fa-fish",
+      "descripcion": "Piqueos, rolls especiales, envueltos en palta, gratinados y tempurizados.",
+      "imagen": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=900&auto=format&fit=crop&q=70",
+      "subcategorias": [
         {
-          "nombre": "Platón de Plateada al Horno",
-          "precio": 16900,
-          "descripcion": "Plateada cocinada a baja temperatura por 6 horas en sus propios jugos y vino tinto, servida sobre un cremoso pastel de choclo tradicional.",
-          "tags": ["carnes", "destacado"]
+          "id": "sushi_piqueos",
+          "nombre": "Sushi Piqueos",
+          "descripcion": "Piqueos calientes y entradas estilo sushi.",
+          "items": [
+            {
+              "nombre": "Ebi Furay",
+              "precio": 8000,
+              "tags": [
+                "sushi",
+                "piqueo"
+              ]
+            },
+            {
+              "nombre": "Gyosas",
+              "precio": 6000,
+              "tags": [
+                "sushi",
+                "piqueo"
+              ]
+            },
+            {
+              "nombre": "Tori Furay",
+              "precio": 7490,
+              "tags": [
+                "sushi",
+                "piqueo"
+              ]
+            }
+          ]
         },
         {
-          "nombre": "Salmón Austral Crocante",
-          "precio": 17500,
-          "descripcion": "Filete de salmón con costra de frutos secos, acompañado de un risotto de quinoa y setas del bosque al aroma de trufa.",
-          "tags": ["pescado", "gourmet"]
+          "id": "sushi_rolls_especiales",
+          "nombre": "Rolls Especiales",
+          "descripcion": "Rolls especiales de la casa.",
+          "items": [
+            {
+              "nombre": "Acevichado Maki",
+              "precio": 9000,
+              "tags": [
+                "sushi",
+                "roll"
+              ]
+            },
+            {
+              "nombre": "Pulpo a la Parrilla Roll",
+              "precio": 9000,
+              "tags": [
+                "sushi",
+                "roll"
+              ]
+            },
+            {
+              "nombre": "Lomo Salteado Maki",
+              "precio": 8000,
+              "tags": [
+                "sushi",
+                "roll"
+              ]
+            },
+            {
+              "nombre": "Mar y Tierra Roll",
+              "precio": 9000,
+              "tags": [
+                "sushi",
+                "roll"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sushi_envueltos_palta",
+          "nombre": "Sushi Envueltos en Palta",
+          "descripcion": "Rolls envueltos en palta.",
+          "items": [
+            {
+              "nombre": "Musa Roll",
+              "precio": 8500,
+              "tags": [
+                "sushi",
+                "palta"
+              ]
+            },
+            {
+              "nombre": "Maki Roll",
+              "precio": 8000,
+              "tags": [
+                "sushi",
+                "palta"
+              ]
+            },
+            {
+              "nombre": "Sake Roll",
+              "precio": 8000,
+              "tags": [
+                "sushi",
+                "palta"
+              ]
+            },
+            {
+              "nombre": "Tori Roll",
+              "precio": 7500,
+              "tags": [
+                "sushi",
+                "palta"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sushi_gratinados",
+          "nombre": "Sushi Gratinados",
+          "descripcion": "Rolls gratinados.",
+          "items": [
+            {
+              "nombre": "Maki Roll",
+              "precio": 8500,
+              "tags": [
+                "sushi",
+                "gratinado"
+              ]
+            },
+            {
+              "nombre": "Sake Roll",
+              "precio": 8000,
+              "tags": [
+                "sushi",
+                "gratinado"
+              ]
+            },
+            {
+              "nombre": "Tori Roll",
+              "precio": 7500,
+              "tags": [
+                "sushi",
+                "gratinado"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sushi_tempurizados",
+          "nombre": "Sushi Tempurizados",
+          "descripcion": "Rolls tempurizados y crocantes.",
+          "items": [
+            {
+              "nombre": "Musa Crispy",
+              "precio": 9000,
+              "tags": [
+                "sushi",
+                "tempura"
+              ]
+            },
+            {
+              "nombre": "Maki Roll",
+              "precio": 8500,
+              "tags": [
+                "sushi",
+                "tempura"
+              ]
+            },
+            {
+              "nombre": "Sake Roll",
+              "precio": 8000,
+              "tags": [
+                "sushi",
+                "tempura"
+              ]
+            },
+            {
+              "nombre": "Tori Roll",
+              "precio": 7500,
+              "tags": [
+                "sushi",
+                "tempura"
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "id": "tablas_picoteo",
-      "nombre": "Tablas & Picoteos",
-      "items": [
+      "id": "cafeteria",
+      "nombre": "Cafetería",
+      "icono": "fa-solid fa-mug-hot",
+      "descripcion": "Café, té, bebidas frías, jugos naturales y bebidas.",
+      "imagen": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&auto=format&fit=crop&q=70",
+      "subcategorias": [
         {
-          "nombre": "Tabla Mar y Tierra",
-          "precio": 24900,
-          "descripcion": "Camarones al ajillo, calamares apanados, cubos de lomo liso salteados, papas rústicas nativas y variedad de salsas de la casa.",
-          "tags": ["para compartir", "caliente"]
+          "id": "te_cafeteria",
+          "nombre": "Té & Cafetería",
+          "descripcion": "Té, café y preparaciones calientes.",
+          "items": [
+            {
+              "nombre": "Té Supremo Tradicional",
+              "precio": 1990,
+              "tags": [
+                "té"
+              ]
+            },
+            {
+              "nombre": "Té Supremo Premium",
+              "precio": 2200,
+              "tags": [
+                "té"
+              ]
+            },
+            {
+              "nombre": "Té Supremo Hierbas",
+              "precio": 2200,
+              "tags": [
+                "té"
+              ]
+            },
+            {
+              "nombre": "Té Twining's",
+              "precio": 2490,
+              "tags": [
+                "té"
+              ]
+            },
+            {
+              "nombre": "Ristretto",
+              "precio": 1890,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Espresso",
+              "precio": 2690,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Espresso Lungo",
+              "precio": 2590,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Espresso Doble",
+              "precio": 2990,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Americano",
+              "precio": 2990,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Americano Doble",
+              "precio": 3490,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Macchiato",
+              "precio": 2590,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Latte",
+              "precio": 3690,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Chai Latte",
+              "precio": 3790,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Cappuccino",
+              "precio": 2990,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Cappuccino Doble",
+              "precio": 3990,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Cappuccino Vainilla",
+              "precio": 2990,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Chocolate Caliente",
+              "precio": 3990,
+              "tags": [
+                "cafetería"
+              ]
+            },
+            {
+              "nombre": "Mokaccino Doble",
+              "precio": 4490,
+              "tags": [
+                "cafetería"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bebidas_frias",
+          "nombre": "Bebidas Frías",
+          "descripcion": "Cafés fríos y preparaciones heladas.",
+          "items": [
+            {
+              "nombre": "Mocha Helado",
+              "precio": 4490,
+              "tags": [
+                "frío"
+              ]
+            },
+            {
+              "nombre": "Ice Caramel",
+              "precio": 4490,
+              "tags": [
+                "frío"
+              ]
+            },
+            {
+              "nombre": "Macchiato Frío",
+              "precio": 2990,
+              "tags": [
+                "frío"
+              ]
+            },
+            {
+              "nombre": "Ice Americano",
+              "precio": 4490,
+              "tags": [
+                "frío"
+              ]
+            },
+            {
+              "nombre": "Affogato",
+              "precio": 4790,
+              "tags": [
+                "frío"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jugos_bebidas",
+          "nombre": "Jugos & Bebidas",
+          "descripcion": "Jugos naturales, bebidas y opciones refrescantes.",
+          "items": [
+            {
+              "nombre": "Jugo Maracuyá",
+              "precio": 3990,
+              "tags": [
+                "jugo natural"
+              ]
+            },
+            {
+              "nombre": "Jugo Mango",
+              "precio": 3990,
+              "tags": [
+                "jugo natural"
+              ]
+            },
+            {
+              "nombre": "Jugo Frutilla",
+              "precio": 3990,
+              "tags": [
+                "jugo natural"
+              ]
+            },
+            {
+              "nombre": "Jugo Piña",
+              "precio": 3990,
+              "tags": [
+                "jugo natural"
+              ]
+            },
+            {
+              "nombre": "Jugo Guayaba",
+              "precio": 3990,
+              "tags": [
+                "jugo natural"
+              ]
+            },
+            {
+              "nombre": "Jugo Frutos Rojos",
+              "precio": 3990,
+              "tags": [
+                "jugo natural"
+              ]
+            },
+            {
+              "nombre": "Limonada Tradicional",
+              "precio": 3990,
+              "tags": [
+                "limonada"
+              ]
+            },
+            {
+              "nombre": "Limonada Menta/Jengibre",
+              "precio": 3990,
+              "tags": [
+                "limonada"
+              ]
+            },
+            {
+              "nombre": "Red Bull",
+              "precio": 2900,
+              "tags": [
+                "bebida"
+              ]
+            },
+            {
+              "nombre": "Red Bull Sabores",
+              "precio": 2900,
+              "tags": [
+                "bebida"
+              ]
+            },
+            {
+              "nombre": "Lata de Bebida 350cc",
+              "precio": 2200,
+              "tags": [
+                "bebida"
+              ]
+            },
+            {
+              "nombre": "Agua Mineral",
+              "precio": 2200,
+              "tags": [
+                "bebida"
+              ]
+            },
+            {
+              "nombre": "Fentimans",
+              "precio": 3900,
+              "tags": [
+                "bebida"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vinos_botellas",
+      "nombre": "Vinos y Botellas",
+      "icono": "fa-solid fa-wine-bottle",
+      "descripcion": "Vinos, espumantes y botellas para la mesa.",
+      "imagen": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=900&auto=format&fit=crop&q=70",
+      "subcategorias": [
+        {
+          "id": "vinos",
+          "nombre": "Vinos",
+          "descripcion": "Vinos tintos, blancos, rosé y espumantes.",
+          "items": [
+            {
+              "nombre": "Tarapacá Gran Reserva Cabernet Sauvignon",
+              "precio": 24900,
+              "tags": [
+                "vino",
+                "cabernet"
+              ]
+            },
+            {
+              "nombre": "The Wine Cabernet Sauvignon",
+              "precio": 18000,
+              "tags": [
+                "vino",
+                "cabernet"
+              ]
+            },
+            {
+              "nombre": "Misiones de Rengo Cuvée Cabernet Sauvignon",
+              "precio": 26000,
+              "tags": [
+                "vino",
+                "cabernet"
+              ]
+            },
+            {
+              "nombre": "Casillero del Diablo Cabernet Sauvignon",
+              "precio": 17000,
+              "tags": [
+                "vino",
+                "cabernet"
+              ]
+            },
+            {
+              "nombre": "Casillero Devil's Collection Cabernet Sauvignon",
+              "precio": 14900,
+              "tags": [
+                "vino",
+                "cabernet"
+              ]
+            },
+            {
+              "nombre": "Marqués Gran Reserva Cabernet Sauvignon",
+              "precio": 25000,
+              "tags": [
+                "vino",
+                "cabernet"
+              ]
+            },
+            {
+              "nombre": "Terrunyo Cabernet Sauvignon",
+              "precio": 45000,
+              "tags": [
+                "vino",
+                "cabernet"
+              ]
+            },
+            {
+              "nombre": "Tarapacá Gran Reserva Carmenere",
+              "precio": 24900,
+              "tags": [
+                "vino",
+                "carmenere"
+              ]
+            },
+            {
+              "nombre": "The Wine Carmenere",
+              "precio": 16000,
+              "tags": [
+                "vino",
+                "carmenere"
+              ]
+            },
+            {
+              "nombre": "Misiones de Rengo Cuvée Carmenere",
+              "precio": 26900,
+              "tags": [
+                "vino",
+                "carmenere"
+              ]
+            },
+            {
+              "nombre": "Casillero del Diablo Carmenere",
+              "precio": 17000,
+              "tags": [
+                "vino",
+                "carmenere"
+              ]
+            },
+            {
+              "nombre": "Marqués Gran Reserva Carmenere",
+              "precio": 25000,
+              "tags": [
+                "vino",
+                "carmenere"
+              ]
+            },
+            {
+              "nombre": "Leyda",
+              "precio": 22000,
+              "tags": [
+                "vino"
+              ]
+            },
+            {
+              "nombre": "Tarapacá",
+              "precio": 10900,
+              "tags": [
+                "vino"
+              ]
+            },
+            {
+              "nombre": "Marqués Gold",
+              "precio": 40000,
+              "tags": [
+                "vino"
+              ]
+            },
+            {
+              "nombre": "Marqués Blue",
+              "precio": 40000,
+              "tags": [
+                "vino"
+              ]
+            },
+            {
+              "nombre": "Leyda Pinot Rose",
+              "precio": 18990,
+              "tags": [
+                "vino",
+                "rosé"
+              ]
+            },
+            {
+              "nombre": "Leyda Reserva",
+              "precio": 24990,
+              "tags": [
+                "vino"
+              ]
+            },
+            {
+              "nombre": "Tarapacá Reserva Sauvignon Blanc",
+              "precio": 18990,
+              "tags": [
+                "vino",
+                "sauvignon blanc"
+              ]
+            },
+            {
+              "nombre": "Tarapacá Gran Reserva Sauvignon Blanc",
+              "precio": 21900,
+              "tags": [
+                "vino",
+                "sauvignon blanc"
+              ]
+            },
+            {
+              "nombre": "Undurraga Brut",
+              "precio": 15900,
+              "tags": [
+                "espumante"
+              ]
+            },
+            {
+              "nombre": "Undurraga Rosé",
+              "precio": 16090,
+              "tags": [
+                "espumante"
+              ]
+            },
+            {
+              "nombre": "Riccadonna 750cc",
+              "precio": 26900,
+              "tags": [
+                "espumante"
+              ]
+            },
+            {
+              "nombre": "Riccadonna 200cc",
+              "precio": 7990,
+              "tags": [
+                "espumante"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "botellas",
+          "nombre": "Botellas",
+          "descripcion": "Botellas disponibles para compartir.",
+          "items": [
+            {
+              "nombre": "Jack Old N°7",
+              "precio": 70000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Jack Honey",
+              "precio": 80000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Jack Apple",
+              "precio": 80000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Jack Fire",
+              "precio": 80000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Johnnie Red",
+              "precio": 80000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Johnnie Black",
+              "precio": 120000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Johnnie Double Black",
+              "precio": 100000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Johnnie Gold",
+              "precio": 150000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Johnnie Blue",
+              "precio": 450000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Chivas 12 Años",
+              "precio": 80000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Chivas 18 Años",
+              "precio": 150000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Chivas 21 Años",
+              "precio": 450000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Ballantine",
+              "precio": 60000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Havana Especial",
+              "precio": 50000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Havana Reserva",
+              "precio": 60000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Havana 7 Años",
+              "precio": 60000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Mistral 35°",
+              "precio": 40000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Mistral 40°",
+              "precio": 45000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Mistral Nobel 40°",
+              "precio": 65000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Mistral Nobel Manzana",
+              "precio": 60000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Alto 35°",
+              "precio": 35000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Alto Blanco",
+              "precio": 50000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Alto 40°",
+              "precio": 45000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Horcón 35°",
+              "precio": 50000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Horcón 40°",
+              "precio": 65000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Absolut Blue",
+              "precio": 50000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Absolut Sabores",
+              "precio": 65000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Espumantes Variedades",
+              "precio": 25000,
+              "tags": [
+                "botella"
+              ]
+            },
+            {
+              "nombre": "Riccadonna",
+              "precio": 30000,
+              "tags": [
+                "botella"
+              ]
+            }
+          ]
         }
       ]
     }
