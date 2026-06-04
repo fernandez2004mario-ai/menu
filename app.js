@@ -1,154 +1,316 @@
-// ==========================================================================
-// LÓGICA PRINCIPAL - MUSA GASTROBAR
-// ==========================================================================
-
 document.addEventListener('DOMContentLoaded', () => {
     inicializarMenu();
 });
 
-/**
- * Función principal que carga los datos del archivo JSON y renderiza la interfaz
- */
+let cartaCompleta = [];
+let categoriaActiva = null;
+let subcategoriaActiva = null;
+
 async function inicializarMenu() {
-    const containerMenu = document.getElementById('menu-container');
-    const containerNav = document.getElementById('categories-nav');
+    const contenedorCategorias = document.getElementById('main-categories');
+    const contenedorSubcategorias = document.getElementById('subcategories-nav');
+    const contenedorMenu = document.getElementById('menu-container');
 
     try {
-        // 1. Simular la carga o leer el archivo local menu.json
         const respuesta = await fetch('menu.json');
-        
+
         if (!respuesta.ok) {
-            throw new Error('No se pudo cargar el archivo de menú');
+            throw new Error('No se pudo cargar el archivo menu.json');
         }
 
         const datos = await respuesta.json();
-        
-        // Limpiar el mensaje de "Cargando..."
-        containerMenu.innerHTML = '';
-        containerNav.innerHTML = '';
 
-        // 2. Recorrer las categorías del JSON para pintar la barra de navegación y los platos/tragos
-        datos.categories.forEach((categoria, index) => {
-            
-            // --- A. CREAR BOTÓN DE NAVEGACIÓN HORIZONTAL ---
-            const botonNav = document.createElement('button');
-            botonNav.classList.add('category-btn');
-            if (index === 0) botonNav.classList.add('active'); // El primero inicia activo
-            botonNav.textContent = categoria.nombre;
-            
-            // Evento al hacer clic en la categoría (Scroll automático)
-            botonNav.addEventListener('click', (e) => {
-                // Quitar clase activa a todos y ponérsela al presionado
-                document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
-                botonNav.classList.add('active');
+        if (!datos.categories || !Array.isArray(datos.categories)) {
+            throw new Error('El archivo menu.json no tiene una estructura válida');
+        }
 
-                // Hacer scroll suave hasta la sección correspondiente
-                const seccionDestino = document.getElementById(`sec-${categoria.id}`);
-                seccionDestino.scrollIntoView({ behavior: 'smooth' });
-            });
+        cartaCompleta = datos.categories;
 
-            containerNav.appendChild(botonNav);
+        if (!contenedorCategorias || !contenedorSubcategorias || !contenedorMenu) {
+            throw new Error('Faltan contenedores en el HTML');
+        }
 
+        renderizarCategoriasPrincipales();
 
-            // --- B. CREAR SECCIÓN DE CONTENIDO ---
-            const seccionHtml = document.createElement('section');
-            seccionHtml.id = `sec-${categoria.id}`;
-            seccionHtml.classList.add('menu-section');
-
-            // Título de la sección (ej. COCTELERÍA DE LA CASA)
-            const tituloSeccion = document.createElement('h2');
-            tituloSeccion.classList.add('section-title');
-            tituloSeccion.textContent = categoria.nombre;
-            seccionHtml.appendChild(tituloSeccion);
-
-            // Recorrer los items (tragos/comidas) de esta categoría
-            categoria.items.forEach(item => {
-                const tarjetaItem = document.createElement('div');
-                tarjetaItem.classList.add('menu-item');
-
-                // Formatear el precio con puntos de miles estilo CLP (ej: $12.000)
-                const precioFormateado = new Intl.NumberFormat('es-CL', {
-                    style: 'currency',
-                    currency: 'CLP',
-                    minimumFractionDigits: 0
-                }).format(item.precio);
-
-                // Construir la estructura interna de la tarjeta
-                let descripcionHtml = item.descripcion ? `<p class="item-description">${item.descripcion}</p>` : '';
-                
-                // Generar las etiquetas (tags) si existen
-                let tagsHtml = '';
-                if (item.tags && item.tags.length > 0) {
-                    tagsHtml = `<div class="item-tags">`;
-                    item.tags.forEach(tag => {
-                        tagsHtml += `<span class="tag">${tag}</span>`;
-                    });
-                    tagsHtml += `</div>`;
-                }
-
-                tarjetaItem.innerHTML = `
-                    <div class="item-header">
-                        <span class="item-name">${item.nombre}</span>
-                        <span class="item-price">${precioFormateado}</span>
-                    </div>
-                    ${descripcionHtml}
-                    ${tagsHtml}
-                `;
-                // --- EVENTO DE CLIC PARA EL ACORDEÓN INTERACTIVO ---
-                tarjetaItem.addEventListener('click', () => {
-                    // Opcional: si quieres que se cierre la tarjeta anterior al abrir una nueva, descomenta la línea de abajo:
-                    // document.querySelectorAll('.menu-item').forEach(item => { if(item !== tarjetaItem) item.classList.remove('open'); });
-                    
-                    tarjetaItem.classList.toggle('open');
-                });
-
-                seccionHtml.appendChild(tarjetaItem);
-            });
-
-            containerMenu.appendChild(seccionHtml);
-        });
-
-        // Lógica extra: Cambiar el botón activo de la barra superior según el usuario hace scroll manual
-        configurarScrollSpy();
+        // Cargar automáticamente la primera categoría al iniciar
+        if (cartaCompleta.length > 0) {
+            seleccionarCategoria(cartaCompleta[0].id);
+        }
 
     } catch (error) {
-        console.error('Error al inicializar la app:', error);
-        containerMenu.innerHTML = `<div class="loading" style="color: #ff4d4d;">Error al cargar el menú. Por favor, reintenta más tarde.</div>`;
+        console.error('Error al cargar el menú:', error);
+
+        if (contenedorCategorias) {
+            contenedorCategorias.innerHTML = `
+                <div class="error-mensaje">
+                    Error al cargar la carta. Revisa el archivo menu.json o usa Live Server.
+                </div>
+            `;
+        }
+
+        if (contenedorMenu) {
+            contenedorMenu.innerHTML = '';
+        }
     }
 }
 
-/**
- * Detecta qué sección está viendo el cliente para iluminar el botón correcto arriba automáticamente
- */
-function configurarScrollSpy() {
-    const secciones = document.querySelectorAll('.menu-section');
-    const botones = document.querySelectorAll('.category-btn');
+/* ============================================================
+   RENDERIZAR CATEGORÍAS PRINCIPALES
+   ============================================================ */
 
-    window.addEventListener('scroll', () => {
-        let seccionActualId = "";
-        
-        secciones.forEach(seccion => {
-            const seccionTop = seccion.offsetTop;
-            // Se le resta 100 píxeles para detectar el cambio un poco antes de llegar al tope
-            if (pageYOffset >= seccionTop - 120) {
-                seccionActualId = seccion.getAttribute('id');
-            }
+function renderizarCategoriasPrincipales() {
+    const contenedorCategorias = document.getElementById('main-categories');
+    contenedorCategorias.innerHTML = '';
+
+    cartaCompleta.forEach((categoria) => {
+        const tarjetaCategoria = document.createElement('article');
+        tarjetaCategoria.classList.add('main-category-card');
+        tarjetaCategoria.dataset.id = categoria.id;
+
+        // Imagen de fondo opcional
+        if (categoria.imagen && categoria.imagen.trim() !== '') {
+            tarjetaCategoria.style.setProperty('--category-image', `url('${categoria.imagen}')`);
+        }
+
+        tarjetaCategoria.innerHTML = `
+            <div class="main-category-content">
+                <div class="main-category-icon">
+                    <i class="${categoria.icono || 'fa-solid fa-utensils'}"></i>
+                </div>
+                <div class="main-category-name">
+                    ${categoria.nombre}
+                </div>
+            </div>
+        `;
+
+        tarjetaCategoria.addEventListener('click', () => {
+            seleccionarCategoria(categoria.id);
         });
 
-        botones.forEach(boton => {
-            boton.classList.remove('active');
-            // Si el botón está enlazado a la sección actual, se activa
-            const idFormateado = `sec-${boton.textContent.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
-            // Una forma más directa emparejando por el orden de los elementos:
-        });
-        
-        // Emparejamiento simplificado por índice para evitar fallos de texto
-        secciones.forEach((seccion, index) => {
-            const rect = seccion.getBoundingClientRect();
-            if (rect.top <= 150 && rect.bottom >= 150) {
-                botones.forEach(btn => btn.classList.remove('active'));
-                if(botones[index]) botones[index].classList.add('active');
-            }
-        });
+        contenedorCategorias.appendChild(tarjetaCategoria);
     });
+}
+
+/* ============================================================
+   SELECCIONAR CATEGORÍA PRINCIPAL
+   ============================================================ */
+
+function seleccionarCategoria(idCategoria) {
+    const categoria = cartaCompleta.find(cat => cat.id === idCategoria);
+
+    if (!categoria) {
+        return;
+    }
+
+    categoriaActiva = categoria;
+
+    // Marcar tarjeta principal activa
+    document.querySelectorAll('.main-category-card').forEach(card => {
+        card.classList.remove('active');
+    });
+
+    const tarjetaActiva = document.querySelector(`.main-category-card[data-id="${idCategoria}"]`);
+    if (tarjetaActiva) {
+        tarjetaActiva.classList.add('active');
+    }
+
+    // Cambiar título e información de la sección seleccionada
+    actualizarEncabezadoSeleccionado(categoria);
+
+    // Renderizar subcategorías
+    renderizarSubcategorias(categoria);
+
+    // Cargar automáticamente la primera subcategoría
+    if (categoria.subcategorias && categoria.subcategorias.length > 0) {
+        seleccionarSubcategoria(categoria.subcategorias[0].id);
+    } else {
+        renderizarProductos([]);
+    }
+}
+
+/* ============================================================
+   ACTUALIZAR ENCABEZADO DE LA CATEGORÍA
+   ============================================================ */
+
+function actualizarEncabezadoSeleccionado(categoria) {
+    const icono = document.getElementById('selected-icon');
+    const titulo = document.getElementById('selected-title');
+    const descripcion = document.getElementById('selected-description');
+
+    if (icono) {
+        icono.innerHTML = `<i class="${categoria.icono || 'fa-solid fa-utensils'}"></i>`;
+    }
+
+    if (titulo) {
+        titulo.textContent = categoria.nombre;
+    }
+
+    if (descripcion) {
+        descripcion.textContent = categoria.descripcion || 'Selecciona una subcategoría para ver los productos disponibles.';
+    }
+}
+
+/* ============================================================
+   RENDERIZAR SUBCATEGORÍAS
+   ============================================================ */
+
+function renderizarSubcategorias(categoria) {
+    const contenedorSubcategorias = document.getElementById('subcategories-nav');
+    contenedorSubcategorias.innerHTML = '';
+
+    if (!categoria.subcategorias || categoria.subcategorias.length === 0) {
+        contenedorSubcategorias.innerHTML = '';
+        return;
+    }
+
+    categoria.subcategorias.forEach((subcategoria) => {
+        const boton = document.createElement('button');
+        boton.classList.add('subcategory-btn');
+        boton.dataset.id = subcategoria.id;
+        boton.textContent = subcategoria.nombre;
+
+        boton.addEventListener('click', () => {
+            seleccionarSubcategoria(subcategoria.id);
+        });
+
+        contenedorSubcategorias.appendChild(boton);
+    });
+}
+
+/* ============================================================
+   SELECCIONAR SUBCATEGORÍA
+   ============================================================ */
+
+function seleccionarSubcategoria(idSubcategoria) {
+    if (!categoriaActiva || !categoriaActiva.subcategorias) {
+        return;
+    }
+
+    const subcategoria = categoriaActiva.subcategorias.find(sub => sub.id === idSubcategoria);
+
+    if (!subcategoria) {
+        return;
+    }
+
+    subcategoriaActiva = subcategoria;
+
+    // Marcar botón activo
+    document.querySelectorAll('.subcategory-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    const botonActivo = document.querySelector(`.subcategory-btn[data-id="${idSubcategoria}"]`);
+    if (botonActivo) {
+        botonActivo.classList.add('active');
+    }
+
+    renderizarProductos(subcategoria.items || [], subcategoria);
+}
+
+/* ============================================================
+   RENDERIZAR PRODUCTOS
+   ============================================================ */
+
+function renderizarProductos(items, subcategoria = null) {
+    const contenedorMenu = document.getElementById('menu-container');
+    contenedorMenu.innerHTML = '';
+
+    if (!items || items.length === 0) {
+        contenedorMenu.innerHTML = `
+            <div class="empty-state">
+                No hay productos disponibles en esta sección.
+            </div>
+        `;
+        return;
+    }
+
+    const tituloSeccion = document.createElement('div');
+    tituloSeccion.classList.add('menu-section-title');
+
+    tituloSeccion.innerHTML = `
+        <h3>${subcategoria ? subcategoria.nombre : 'Productos disponibles'}</h3>
+        <p>${subcategoria && subcategoria.descripcion ? subcategoria.descripcion : 'Selecciona un producto para ver más detalles.'}</p>
+    `;
+
+    const grillaProductos = document.createElement('div');
+    grillaProductos.classList.add('products-grid');
+
+    items.forEach((item, index) => {
+        const tarjetaProducto = document.createElement('article');
+        tarjetaProducto.classList.add('product-card');
+
+        // Cada tercer producto puede ocupar más espacio en pantallas grandes
+        if (index % 5 === 2) {
+            tarjetaProducto.classList.add('featured');
+        }
+
+        const precioFormateado = formatearPrecio(item.precio);
+
+        const imagenHtml = item.imagen && item.imagen.trim() !== ''
+            ? `
+                <div class="product-image-wrap">
+                    <img src="${item.imagen}" alt="${item.nombre}" class="product-image">
+                </div>
+            `
+            : '';
+
+        const descripcionHtml = item.descripcion && item.descripcion.trim() !== ''
+            ? `<p class="product-description">${item.descripcion}</p>`
+            : '';
+
+        const tagsHtml = item.tags && item.tags.length > 0
+            ? `
+                <div class="product-tags">
+                    ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+            `
+            : '';
+
+        tarjetaProducto.innerHTML = `
+            <div class="product-card-inner">
+                <div class="product-info">
+                    <h4 class="product-name">${item.nombre}</h4>
+                    ${descripcionHtml}
+                </div>
+
+                ${imagenHtml}
+            </div>
+
+            <div class="product-footer">
+                <div>
+                    ${tagsHtml}
+                    <div class="product-price">${precioFormateado}</div>
+                </div>
+
+                <div class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+        `;
+
+        tarjetaProducto.addEventListener('click', () => {
+            tarjetaProducto.classList.toggle('open');
+        });
+
+        grillaProductos.appendChild(tarjetaProducto);
+    });
+
+    contenedorMenu.appendChild(tituloSeccion);
+    contenedorMenu.appendChild(grillaProductos);
+}
+
+/* ============================================================
+   FORMATEAR PRECIO
+   ============================================================ */
+
+function formatearPrecio(precio) {
+    if (precio === null || precio === undefined || precio === '') {
+        return 'Consultar';
+    }
+
+    return new Intl.NumberFormat('es-CL', {
+        style: 'currency',
+        currency: 'CLP',
+        minimumFractionDigits: 0
+    }).format(precio);
 }
