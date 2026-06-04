@@ -3,30 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>Musa Gastrobar - Menú Digital</title>
+
     <link rel="stylesheet" href="styles.css">
-    <!-- Iconos rápidos para la interfaz móvil -->
+
+    <!-- Iconos para categorías -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Encabezado fijo del local -->
+    <!-- ENCABEZADO PRINCIPAL -->
     <header class="main-header">
         <div class="logo">MUSA</div>
         <p class="subtitle">GASTROBAR</p>
     </header>
 
-    <!-- Barra de categorías deslizable horizontalmente (Ideal para dedos) -->
-    <nav class="categories-nav" id="categories-nav">
-        <!-- Los botones se generarán automáticamente desde JS -->
-    </nav>
+    <!-- BLOQUE DE CATEGORÍAS PRINCIPALES -->
+    <section class="home-section">
+        <h1 class="home-title">¿Qué deseas ver?</h1>
+        <div class="gold-divider"></div>
 
-    <!-- Contenedor principal donde se cargará el menú dinámicamente -->
-    <main class="menu-container" id="menu-container">
-        <div class="loading">Cargando la experiencia Musa...</div>
-    </main>
+        <!-- Aquí JS cargará Comida, Cócteles, Cervezas, etc. -->
+        <div class="main-categories" id="main-categories">
+            <div class="loading">Cargando categorías...</div>
+        </div>
+    </section>
 
-    <!-- Script lógico -->
+    <!-- BLOQUE DINÁMICO DE LA CATEGORÍA SELECCIONADA -->
+    <section class="selected-section" id="selected-section">
+
+        <div class="selected-header">
+            <span class="selected-icon" id="selected-icon">
+                <i class="fa-solid fa-utensils"></i>
+            </span>
+
+            <div>
+                <h2 class="selected-title" id="selected-title">Selecciona una categoría</h2>
+                <p class="selected-description" id="selected-description">
+                    Elige una sección de la carta para ver sus productos disponibles.
+                </p>
+            </div>
+        </div>
+
+        <!-- Aquí JS cargará las subcategorías -->
+        <nav class="subcategories-nav" id="subcategories-nav">
+            <!-- Ejemplo: Fondos, Tablas, Sanguchitos -->
+        </nav>
+
+        <!-- Aquí JS cargará los productos -->
+        <main class="menu-container" id="menu-container">
+            <div class="empty-state">
+                Selecciona una categoría para comenzar.
+            </div>
+        </main>
+
+    </section>
+
+    <!-- SCRIPT PRINCIPAL -->
     <script src="app.js"></script>
 </body>
 </html>
