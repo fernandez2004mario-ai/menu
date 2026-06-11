@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     inicializarMenu();
+    configurarIndicadorScroll();
 });
 
 let cartaCompleta = [];
@@ -281,11 +282,6 @@ function renderizarProductos(items, subcategoria = null) {
                     ${tagsHtml}
                     <div class="product-price">${precioFormateado}</div>
                 </div>
-
-                <div class="add-btn">
-                    <i class="fa-solid fa-plus"></i>
-                </div>
-            </div>
         `;
 
         tarjetaProducto.addEventListener('click', () => {
@@ -313,4 +309,75 @@ function formatearPrecio(precio) {
         currency: 'CLP',
         minimumFractionDigits: 0
     }).format(precio);
+}
+/* ============================================================
+   INDICADOR DE CONTENIDO MÁS ABAJO
+   ============================================================ */
+
+function configurarIndicadorScroll() {
+    const indicador = document.getElementById('scroll-indicator');
+
+    if (!indicador) {
+        return;
+    }
+
+    let ticking = false;
+
+    function actualizarIndicador() {
+        const scrollElement = document.scrollingElement || document.documentElement;
+
+        const alturaTotal = scrollElement.scrollHeight;
+        const alturaPantalla = window.innerHeight;
+        const scrollActual = scrollElement.scrollTop;
+
+        const maxScroll = alturaTotal - alturaPantalla;
+        const paginaTieneScroll = maxScroll > 100;
+
+        let progreso = 0;
+
+        if (paginaTieneScroll) {
+            progreso = scrollActual / maxScroll;
+            progreso = Math.max(0, Math.min(progreso, 1));
+        }
+
+        indicador.style.setProperty('--scroll-progress', progreso.toFixed(3));
+
+        indicador.classList.toggle(
+            'visible',
+            paginaTieneScroll && progreso < 0.96
+        );
+
+        ticking = false;
+    }
+
+    function solicitarActualizacion() {
+        if (!ticking) {
+            window.requestAnimationFrame(actualizarIndicador);
+            ticking = true;
+        }
+    }
+
+    indicador.addEventListener('click', () => {
+        const destino = document.getElementById('selected-section');
+
+        if (destino) {
+            destino.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        } else {
+            window.scrollBy({
+                top: window.innerHeight * 0.7,
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    window.addEventListener('scroll', solicitarActualizacion, {
+        passive: true
+    });
+
+    window.addEventListener('resize', solicitarActualizacion);
+
+    setTimeout(actualizarIndicador, 800);
 }
